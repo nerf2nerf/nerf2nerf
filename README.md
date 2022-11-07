@@ -50,5 +50,4 @@ This will launch visdom on localhost:<port_number>. You can change the port_numb
 To see the results, launch tensorboard:
 ```sh
 tensorboard --logdir="." --port=<tensorboard_port_number>
-# example: visdom -p 6006
 ```
