@@ -10,7 +10,10 @@ PyTorch implementation of nerf2nerf, a framework for robustly registering two Ne
  [Daniel Rebain](http://drebain.com/),
  [Sara Sabour](https://ca.linkedin.com/in/sara-sabour-63019132),
  [Animesh Garg](https://animesh.garg.tech/),
- [Andrea Tagliasacchi](https://taiya.github.io/),
+ [Andrea Tagliasacchi](https://taiya.github.io/)
+ 
+## Run Experiments
+
 #### Dataset
 You can download the dataset from [here](https://drive.google.com/drive/folders/1jNpwAv1T1ntjIHUMJ1wABePA2Z8_nRRQ?usp=sharing) and put the 'scenes' directoy right under the main directory.
 #### Environment
