@@ -11,14 +11,17 @@ PyTorch implementation of nerf2nerf, a framework for robustly registering two Ne
  [Sara Sabour](https://ca.linkedin.com/in/sara-sabour-63019132),
  [Animesh Garg](https://animesh.garg.tech/),
  [Andrea Tagliasacchi](https://taiya.github.io/),
-
+#### Dataset
+You can download the dataset from [here](https://drive.google.com/drive/folders/1jNpwAv1T1ntjIHUMJ1wABePA2Z8_nRRQ?usp=sharing) and put the 'scenes' directoy right under the main directory.
 #### Environment
 
 Set up a conda environment and activate:
 
 ```sh
-conda create --name n2n_env --file requirements.txt
+conda create -n n2n 
 conda activate n2n_env
+pip install -r requirements.txt
+pip install git+https://github.com/jonbarron/robust_loss_pytorch
 ```
 #### Run
 To run the surface field distillation code:
@@ -33,8 +36,9 @@ python use.py --yaml <object_name>
 # example: python use.py --yaml bust 
 ```
 ## Visdom
-If use_vis is enabled in options yaml file, to see the sample points changing during registration in 3D, run:
+If use_vis is enabled in options yaml file, to see the sample points changing during registration in 3D, in a terminal run:
 ```sh
+conda activate n2n
 visdom -p <port_number>
 # example: visdom -p 5946
 ```
