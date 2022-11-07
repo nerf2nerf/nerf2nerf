@@ -22,7 +22,7 @@ Set up a conda environment and activate:
 
 ```sh
 conda create -n n2n 
-conda activate n2n_env
+conda activate n2n
 pip install -r requirements.txt
 pip install git+https://github.com/jonbarron/robust_loss_pytorch
 ```
