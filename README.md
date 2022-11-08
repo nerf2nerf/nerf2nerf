@@ -53,4 +53,4 @@ To see the results, launch tensorboard in terminal:
 ```sh
 tensorboard --logdir="." --port=<tensorboard_port_number> --bind_all
 ```
-Then open a browser windows (or alternatively use port forwarding if you are using a remote server) and view results on localhost:<tensorboard_port_number>.
+Then open a browser window (or alternatively use port forwarding if you are using a remote server) and view results on localhost:<tensorboard_port_number>.
