@@ -32,6 +32,7 @@ To run registration code:
 python use.py --yaml <object_name> 
 # example: python use.py --yaml bust 
 ```
+The results are saved to tensorboard. Connect to tensorboard to view results.
 To reobtain the distilled models and run the surface field distillation code:
 
 ```sh
@@ -48,7 +49,8 @@ visdom -p <port_number>
 ```
 This will launch visdom on localhost:<port_number>. You can change the port_number in option yaml files.
 ## Tensorboard
-To see the results, launch tensorboard:
+To see the results, launch tensorboard in terminal:
 ```sh
-tensorboard --logdir="." --port=<tensorboard_port_number>
+tensorboard --logdir="." --port=<tensorboard_port_number> --bind_all
 ```
+Then open a browser windows (or alternatively use port forwarding if you are using a remote server) and view results on localhost:<tensorboard_port_number>.
