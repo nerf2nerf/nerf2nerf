@@ -50,13 +50,15 @@ def write_log(writer, time, obj_pc, R, t, loss, loss1, loss2, sigma, T_gt, euler
         mean_distance = np.mean(distance)
         writer.add_scalar('3D-ADD', mean_distance, time)
 
-    # print("Distance:", mean_distance)
-    # print("delta_translation:", delta_tr)
-    # print("delta_rotation:", delta_rot)
-    # print("loss:", loss)
-    # print("loss 1:", loss1)
-    # print("loss 2:", loss2)
-    # print("smoothing sigma", sigma)
+    if time % 1000 == 0:
+        print("iteration:", time)
+        print("Distance:", mean_distance)
+        print("delta_translation:", delta_tr)
+        print("delta_rotation:", delta_rot)
+        print("loss:", loss)
+        print("loss 1:", loss1)
+        print("loss 2:", loss2)
+        print("smoothing sigma", sigma)
 
 
 def save_transform(R, t, root):
