@@ -27,17 +27,18 @@ pip install -r requirements.txt
 pip install git+https://github.com/jonbarron/robust_loss_pytorch
 ```
 #### Run
-To run the surface field distillation code:
-
-```sh
-python distill.py --scene_no <scene_number> --a_or_b <a/b>
-# example: python distill.py --scene_no 1 --a_or_b a
-```
 To run registration code:
 ```sh
 python use.py --yaml <object_name> 
 # example: python use.py --yaml bust 
 ```
+To reobtain the distilled models and run the surface field distillation code:
+
+```sh
+python distill.py --scene_no <scene_number> --a_or_b <a/b>
+# example: python distill.py --scene_no 1 --a_or_b a
+```
+
 ## Visdom
 If use_vis is enabled in options yaml file, to see the sample points changing during registration in 3D, in a terminal run:
 ```sh
