@@ -17,7 +17,7 @@ To get started quickly, assuming [Singularity](https://docs.sylabs.io/guides/2.6
 ```sh
 ./run_demo.sh
 ```
-You can view resulting images and graphs in your browser on localhost:6006 an track sampling process in 3D on localhost:5946.
+You can view resulting images and graphs in your browser on localhost:6006 and track sampling process in 3D on localhost:5946.
 
 ## Build Environment and Run
 
