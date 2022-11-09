@@ -13,7 +13,8 @@ PyTorch implementation of nerf2nerf, a framework for robustly registering two Ne
  [Andrea Tagliasacchi](https://taiya.github.io/)
 
 ## Quick Start
-To get started quickly, assuming [Singularity](https://docs.sylabs.io/guides/2.6/user-guide/installation.html#installation) is installed on your device, get the bash script file from [here](https://drive.google.com/file/d/1gYrSP4k03LXPtfwVIC9joOK6kzUIHbJO/view?usp=sharing) and put it in target directory. Then run the line below in terminal to get the demo running. Please note the script will clone this repository and a Singlarity image for a compatible environment, automatically and there is no need for separate cloning. Tested to work with nvidia-cuda-toolkit 11.0.
+To get started quickly, assuming [Singularity](https://docs.sylabs.io/guides/2.6/user-guide/installation.html#installation) and NVIDIA drivers/libraries are installed on your device, get the bash script file from [here](https://drive.google.com/file/d/1gYrSP4k03LXPtfwVIC9joOK6kzUIHbJO/view?usp=sharing) and put it in target directory. Then run the command below in terminal to get the demo running. 
+Please note the script will clone this repository and a Singlarity image for a compatible environment, automatically and there is no need for separate cloning. Tested to work with nvidia-cuda-toolkit 11.0.
 ```sh
 ./run_demo.sh
 ```
