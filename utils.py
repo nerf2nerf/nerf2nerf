@@ -52,13 +52,13 @@ def write_log(writer, time, obj_pc, R, t, loss, loss1, loss2, sigma, T_gt, euler
 
     if time % 1000 == 0:
         print("iteration:", time)
-        print("Distance:", mean_distance)
+        print("3D-ADD:", mean_distance)
         print("delta_translation:", delta_tr)
         print("delta_rotation:", delta_rot)
-        print("loss:", loss)
-        print("loss 1:", loss1)
-        print("loss 2:", loss2)
-        print("smoothing sigma", sigma)
+        print("loss:", loss.item())
+        print("loss 1:", loss1.item())
+        print("loss 2:", loss2.item())
+        print("smoothing sigma", sigma.item())
 
 
 def save_transform(R, t, root):
