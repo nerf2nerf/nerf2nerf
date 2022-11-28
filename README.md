@@ -37,8 +37,8 @@ pip install git+https://github.com/jonbarron/robust_loss_pytorch
 #### Run
 To run registration code:
 ```sh
-python use.py --yaml <object_name> 
-# example: python use.py --yaml bust 
+python main.py --yaml <object_name> 
+# example: python main.py --yaml bust 
 ```
 The results are saved to tensorboard. Connect to tensorboard to view results.
 To reobtain the distilled models and run the surface field distillation code:
