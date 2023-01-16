@@ -279,7 +279,7 @@ def show_pred_image(sig, level, top_view, focal, L, model):
 
 def show_gt_image(sig, teacher_net, level, cameras):
     f = plt.figure()
-    rgb = teacher_net.get_surface_value(top_view, focal, level, sig[0], cameras, full_images=True)[
+    rgb = teacher_net.get_prob(top_view, focal, level, sig[0], cameras, full_images=True)[
         0].clone().cpu().numpy()
     rgb[0, 0, 0] = 0
     rgb[0, 0, 1] = 1.

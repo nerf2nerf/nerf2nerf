@@ -403,7 +403,7 @@ def generate_camera_point_spherical(r, theta=None, phi=None, phi_low=np.pi / 4, 
 
 
 def load_sample_extrinsic(file_p, i, res=(512, 512)):
-    poses, _ = load_poses(file_p, res)
+    _, poses = load_poses(file_p, res)
     return poses[i]
 
 
