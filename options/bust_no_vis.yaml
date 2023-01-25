@@ -1,0 +1,22 @@
+object_name: "bust"                                               # name of object of interest
+real: False                                                       # if it is a real scene
+scene_no: 1                                                       # scene number
+scale: 1.                                                         # relative size scale between the pair (can be different in                                                                       mipNeRF-360) and can be approimated using kp pair ratios
+extract_pc: False                                                 # set to True to generate point cloud from nerf
+image_size: [512, 512]                                            # rendered image size
+device: "cuda:0"                                                  # device
+
+freq: 20                                                          # frequency of updating samples and logging results
+iters: 10000                                                      # total number of optimization iterations
+obj_bigness: 1.                                                   # approximation of how small/thin object is relative to scene                                                                     usually set to one unless object is too small or too big 
+
+use_vis: False                                                     # use visdom to track samples real-time
+vis_port: 5946                                                    # port for usin visdom
+
+show_freq: 10000                                                  # rendering results every n iterations
+z_offset: 0.4                                                     # some parameters for camera view in rendering results
+phi_low: 0.785                                                    # some parameters for camera view in rendering results
+r_scale: 1.3                                                      # some parameters for camera view in rendering results
+near: 0.3                                                         # near plane
+far: 0.8                                                          # far plane
+chunk: 256                                                        # chunk size for rendering full image
