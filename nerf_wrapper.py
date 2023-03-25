@@ -27,6 +27,11 @@ class NeRFWrapper():
         rgb, density = self.nerf.call_eval(positions, directions)
         return rgb, density
 
+    def query_density(self, positions):
+        direction_zeros = torch.zeros_like(positions).cuda() # [N, 3]
+        _, density = self.query_nerf(positions, direction_zeros)
+        return density
+
     def query_transmittance(self, positions, cam_origin):
         transmittance = self.nerf.transmittance_eval(positions, cam_origin)
         return transmittance
@@ -193,6 +198,9 @@ class NeRFWrapper():
         for n in torch.arange(batch_count):
             positions_chunk = positions[n * chunk:(n + 1) * chunk].reshape(chunk * depths.shape[1], 3)
             rays_chunk = rays[n * chunk:(n + 1) * chunk].reshape(chunk * depths.shape[1], 3)
+
+            print('positions_chunk shape: ', positions_chunk.shape)
+            print('rays_chunk shape: ', rays_chunk.shape)
 
             rgb_n, density_n = self.nerf.call_eval(positions_chunk.to(device), rays_chunk.to(device))
             density_n = density_n.reshape(chunk, depths.shape[1])
